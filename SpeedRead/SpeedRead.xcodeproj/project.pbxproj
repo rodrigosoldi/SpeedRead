@@ -15,6 +15,12 @@
 		AC100B9F1A8560170089F734 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC100B9E1A8560170089F734 /* Images.xcassets */; };
 		AC100BA21A8560170089F734 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC100BA01A8560170089F734 /* LaunchScreen.xib */; };
 		AC100BAE1A8560170089F734 /* SpeedReadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BAD1A8560170089F734 /* SpeedReadTests.m */; };
+		AC100BBD1A8561210089F734 /* SRResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BBC1A8561210089F734 /* SRResult.m */; };
+		AC100BC01A8561320089F734 /* SRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BBF1A8561320089F734 /* SRSession.m */; };
+		AC100BC31A8561480089F734 /* SRSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BC21A8561480089F734 /* SRSetting.m */; };
+		AC100BC61A8561570089F734 /* SRTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BC51A8561570089F734 /* SRTest.m */; };
+		AC100BC91A8561600089F734 /* SRText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BC81A8561600089F734 /* SRText.m */; };
+		AC100BCC1A8561820089F734 /* SRDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BCB1A8561820089F734 /* SRDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,18 @@
 		AC100BA71A8560170089F734 /* SpeedReadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedReadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC100BAC1A8560170089F734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC100BAD1A8560170089F734 /* SpeedReadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedReadTests.m; sourceTree = "<group>"; };
+		AC100BBB1A8561210089F734 /* SRResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRResult.h; sourceTree = "<group>"; };
+		AC100BBC1A8561210089F734 /* SRResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRResult.m; sourceTree = "<group>"; };
+		AC100BBE1A8561320089F734 /* SRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSession.h; sourceTree = "<group>"; };
+		AC100BBF1A8561320089F734 /* SRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSession.m; sourceTree = "<group>"; };
+		AC100BC11A8561480089F734 /* SRSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSetting.h; sourceTree = "<group>"; };
+		AC100BC21A8561480089F734 /* SRSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSetting.m; sourceTree = "<group>"; };
+		AC100BC41A8561570089F734 /* SRTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRTest.h; sourceTree = "<group>"; };
+		AC100BC51A8561570089F734 /* SRTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRTest.m; sourceTree = "<group>"; };
+		AC100BC71A8561600089F734 /* SRText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRText.h; sourceTree = "<group>"; };
+		AC100BC81A8561600089F734 /* SRText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRText.m; sourceTree = "<group>"; };
+		AC100BCA1A8561820089F734 /* SRDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDatabase.h; sourceTree = "<group>"; };
+		AC100BCB1A8561820089F734 /* SRDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +153,16 @@
 		AC100BB81A85605A0089F734 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC100BBB1A8561210089F734 /* SRResult.h */,
+				AC100BBC1A8561210089F734 /* SRResult.m */,
+				AC100BBE1A8561320089F734 /* SRSession.h */,
+				AC100BBF1A8561320089F734 /* SRSession.m */,
+				AC100BC11A8561480089F734 /* SRSetting.h */,
+				AC100BC21A8561480089F734 /* SRSetting.m */,
+				AC100BC41A8561570089F734 /* SRTest.h */,
+				AC100BC51A8561570089F734 /* SRTest.m */,
+				AC100BC71A8561600089F734 /* SRText.h */,
+				AC100BC81A8561600089F734 /* SRText.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -143,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				AC100B951A8560170089F734 /* SpeedRead.xcdatamodeld */,
+				AC100BCA1A8561820089F734 /* SRDatabase.h */,
+				AC100BCB1A8561820089F734 /* SRDatabase.m */,
 			);
 			name = Dao;
 			sourceTree = "<group>";
@@ -254,10 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC100BC91A8561600089F734 /* SRText.m in Sources */,
+				AC100BC61A8561570089F734 /* SRTest.m in Sources */,
+				AC100BBD1A8561210089F734 /* SRResult.m in Sources */,
 				AC100B941A8560170089F734 /* AppDelegate.m in Sources */,
 				AC100B971A8560170089F734 /* SpeedRead.xcdatamodeld in Sources */,
 				AC100B9A1A8560170089F734 /* ViewController.m in Sources */,
 				AC100B911A8560170089F734 /* main.m in Sources */,
+				AC100BCC1A8561820089F734 /* SRDatabase.m in Sources */,
+				AC100BC01A8561320089F734 /* SRSession.m in Sources */,
+				AC100BC31A8561480089F734 /* SRSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
