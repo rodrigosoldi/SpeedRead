@@ -20,7 +20,8 @@
 		AC100BC31A8561480089F734 /* SRSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BC21A8561480089F734 /* SRSetting.m */; };
 		AC100BC61A8561570089F734 /* SRTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BC51A8561570089F734 /* SRTest.m */; };
 		AC100BC91A8561600089F734 /* SRText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BC81A8561600089F734 /* SRText.m */; };
-		AC100BCC1A8561820089F734 /* SRDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BCB1A8561820089F734 /* SRDatabase.m */; };
+		AC14B5C61A856A55008EE28C /* SRDaoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14B5C51A856A55008EE28C /* SRDaoTest.m */; };
+		AC14B5C91A856A65008EE28C /* SRDaoText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14B5C81A856A65008EE28C /* SRDaoText.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +59,10 @@
 		AC100BC51A8561570089F734 /* SRTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRTest.m; sourceTree = "<group>"; };
 		AC100BC71A8561600089F734 /* SRText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRText.h; sourceTree = "<group>"; };
 		AC100BC81A8561600089F734 /* SRText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRText.m; sourceTree = "<group>"; };
-		AC100BCA1A8561820089F734 /* SRDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDatabase.h; sourceTree = "<group>"; };
-		AC100BCB1A8561820089F734 /* SRDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDatabase.m; sourceTree = "<group>"; };
+		AC14B5C41A856A55008EE28C /* SRDaoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDaoTest.h; sourceTree = "<group>"; };
+		AC14B5C51A856A55008EE28C /* SRDaoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDaoTest.m; sourceTree = "<group>"; };
+		AC14B5C71A856A65008EE28C /* SRDaoText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDaoText.h; sourceTree = "<group>"; };
+		AC14B5C81A856A65008EE28C /* SRDaoText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDaoText.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				AC100B951A8560170089F734 /* SpeedRead.xcdatamodeld */,
-				AC100BCA1A8561820089F734 /* SRDatabase.h */,
-				AC100BCB1A8561820089F734 /* SRDatabase.m */,
+				AC14B5C41A856A55008EE28C /* SRDaoTest.h */,
+				AC14B5C51A856A55008EE28C /* SRDaoTest.m */,
+				AC14B5C71A856A65008EE28C /* SRDaoText.h */,
+				AC14B5C81A856A65008EE28C /* SRDaoText.m */,
 			);
 			name = Dao;
 			sourceTree = "<group>";
@@ -288,10 +293,11 @@
 				AC100BC61A8561570089F734 /* SRTest.m in Sources */,
 				AC100BBD1A8561210089F734 /* SRResult.m in Sources */,
 				AC100B941A8560170089F734 /* AppDelegate.m in Sources */,
+				AC14B5C91A856A65008EE28C /* SRDaoText.m in Sources */,
 				AC100B971A8560170089F734 /* SpeedRead.xcdatamodeld in Sources */,
+				AC14B5C61A856A55008EE28C /* SRDaoTest.m in Sources */,
 				AC100B9A1A8560170089F734 /* ViewController.m in Sources */,
 				AC100B911A8560170089F734 /* main.m in Sources */,
-				AC100BCC1A8561820089F734 /* SRDatabase.m in Sources */,
 				AC100BC01A8561320089F734 /* SRSession.m in Sources */,
 				AC100BC31A8561480089F734 /* SRSetting.m in Sources */,
 			);
@@ -486,6 +492,7 @@
 				AC100BB31A8560170089F734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC100BB41A8560170089F734 /* Build configuration list for PBXNativeTarget "SpeedReadTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +501,7 @@
 				AC100BB61A8560170089F734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
