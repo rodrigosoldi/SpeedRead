@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "SRTest.h"
 
 @interface SRDaoTest : NSObject
+
+-(void)create:(SRTest *)test;
+-(SRTest *)read: (SRTest *)test;
+-(void)update: (SRTest *)test;
+-(void)erase: (SRTest *)test;
 
 @end

@@ -10,4 +10,24 @@
 
 @implementation SRDaoText
 
+-(void)create:(SRText *)text
+{
+    
+}
+
+-(SRText *)read:(SRText *)text
+{
+    return nil;
+}
+
+-(void)update:(SRText *)text
+{
+    
+}
+
+-(void)erase:(SRText *)text
+{
+    
+}
+
 @end

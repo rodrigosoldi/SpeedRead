@@ -22,6 +22,7 @@
 		AC100BC91A8561600089F734 /* SRText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100BC81A8561600089F734 /* SRText.m */; };
 		AC14B5C61A856A55008EE28C /* SRDaoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14B5C51A856A55008EE28C /* SRDaoTest.m */; };
 		AC14B5C91A856A65008EE28C /* SRDaoText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14B5C81A856A65008EE28C /* SRDaoText.m */; };
+		AC14B5CC1A856F0D008EE28C /* SRProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14B5CB1A856F0D008EE28C /* SRProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		AC14B5C51A856A55008EE28C /* SRDaoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDaoTest.m; sourceTree = "<group>"; };
 		AC14B5C71A856A65008EE28C /* SRDaoText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDaoText.h; sourceTree = "<group>"; };
 		AC14B5C81A856A65008EE28C /* SRDaoText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDaoText.m; sourceTree = "<group>"; };
+		AC14B5CA1A856F0D008EE28C /* SRProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRProperties.h; sourceTree = "<group>"; };
+		AC14B5CB1A856F0D008EE28C /* SRProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRProperties.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				AC14B5C51A856A55008EE28C /* SRDaoTest.m */,
 				AC14B5C71A856A65008EE28C /* SRDaoText.h */,
 				AC14B5C81A856A65008EE28C /* SRDaoText.m */,
+				AC14B5CA1A856F0D008EE28C /* SRProperties.h */,
+				AC14B5CB1A856F0D008EE28C /* SRProperties.m */,
 			);
 			name = Dao;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				AC100B911A8560170089F734 /* main.m in Sources */,
 				AC100BC01A8561320089F734 /* SRSession.m in Sources */,
 				AC100BC31A8561480089F734 /* SRSetting.m in Sources */,
+				AC14B5CC1A856F0D008EE28C /* SRProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
