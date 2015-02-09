@@ -14,15 +14,28 @@
 -(void)create:(SRTest *)test
 {
     NSError *error;
-    
     NSManagedObjectContext *context = [[SRProperties sharedInstance] managedObjectContext];
+    NSEntityDescription *entityTest = [NSEntityDescription entityForName:TESTS inManagedObjectContext:context];
+    NSManagedObject *cTest = [[NSManagedObject alloc] initWithEntity:entityTest insertIntoManagedObjectContext:context];
     
-    SRTest *cTest = [NSEntityDescription insertNewObjectForEntityForName:TESTS inManagedObjectContext:context];
-    [cTest setQuestion: [test question]];
-    [cTest setGivenAnswer: [test givenAnswer]];
-    [cTest setRigthAnswer: [test rigthAnswer]];
+    [cTest setValue:[test question] forKey:@"question"];
+    [cTest setValue:[test rigthAnswer] forKey:@"rightAnswer"];
     
-    [context save: &error];
+    NSString *answerA = [[test answer] objectAtIndex:0];
+    NSString *answerB = [[test answer] objectAtIndex:1];
+    NSString *answerC = [[test answer] objectAtIndex:2];
+    NSString *answerD = [[test answer] objectAtIndex:3];
+    
+    [cTest setValue: answerA forKey:@"answerA"];
+    [cTest setValue: answerB forKey:@"answerB"];
+    [cTest setValue: answerC forKey:@"answerC"];
+    [cTest setValue: answerD forKey:@"answerD"];
+    
+    
+    
+    if (![context save:&error])
+        NSLog(@"Nao salvo");
+    
 }
 
 -(SRTest *)read:(SRTest *)test
