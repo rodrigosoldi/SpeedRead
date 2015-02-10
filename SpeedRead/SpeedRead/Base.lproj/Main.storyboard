@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="552" y="172"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="rbz-i0-uMO">
             <objects>
-                <viewController id="5hq-QN-DnN" sceneMemberID="viewController">
+                <viewController id="5hq-QN-DnN" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yhj-81-mdU"/>
                         <viewControllerLayoutGuide type="bottom" id="2EL-uc-uBz"/>
@@ -51,17 +51,70 @@
                     <view key="view" contentMode="scaleToFill" id="aHU-bu-MdE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Palavras por vez:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxd-dA-nhW">
+                                <rect key="frame" x="234" y="68" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDf-cU-zgr">
+                                <rect key="frame" x="258" y="186" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Testar compreensão:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhe-nl-78u">
+                                <rect key="frame" x="220" y="289" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número de questões:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9y-US-9wa">
+                                <rect key="frame" x="217" y="394" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zVY-3e-ILd">
+                                <rect key="frame" x="185" y="223" width="231" height="31"/>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yGo-Ms-AnT">
+                                <rect key="frame" x="187" y="333" width="227" height="29"/>
+                                <segments>
+                                    <segment title="Sim"/>
+                                    <segment title="Não"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z3c-L5-W4w">
+                                <rect key="frame" x="185" y="437" width="231" height="31"/>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kdw-sE-oHg">
+                                <rect key="frame" x="187" y="108" width="227" height="29"/>
+                                <segments>
+                                    <segment title="Uma"/>
+                                    <segment title="Duas"/>
+                                    <segment title="Três"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="numberOfQuestionsSlider" destination="Z3c-L5-W4w" id="lfn-DX-G1m"/>
+                        <outlet property="numberOfWordsSegmentedControl" destination="kdw-sE-oHg" id="7tW-MD-wjn"/>
+                        <outlet property="speedSlider" destination="zVY-3e-ILd" id="y7Y-aB-PsH"/>
+                        <outlet property="testingComprehensionSegmentedControl" destination="yGo-Ms-AnT" id="ChV-vP-0tw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIG-BU-XyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1294" y="172"/>
         </scene>
-        <!--View Controller-->
+        <!--Text Reading View Controller-->
         <scene sceneID="hez-dL-OsC">
             <objects>
-                <viewController id="M3H-K9-yGD" sceneMemberID="viewController">
+                <viewController id="M3H-K9-yGD" customClass="TextReadingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cKA-xg-5Z1"/>
                         <viewControllerLayoutGuide type="bottom" id="88e-FC-Nqu"/>
@@ -69,9 +122,18 @@
                     <view key="view" contentMode="scaleToFill" id="CdV-lr-Cg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8s-d5-dTz">
+                                <rect key="frame" x="16" y="289" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="textLabel" destination="s8s-d5-dTz" id="1Jv-U4-vxH"/>
                         <segue destination="n1w-Bs-Trp" kind="show" id="fYB-w6-Ar5"/>
                     </connections>
                 </viewController>
@@ -95,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="-284" y="172"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="PTN-eg-nOs">
             <objects>
-                <viewController id="n1w-Bs-Trp" sceneMemberID="viewController">
+                <viewController id="n1w-Bs-Trp" customClass="QuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u8J-HV-Ih0"/>
                         <viewControllerLayoutGuide type="bottom" id="MOr-18-mbC"/>
@@ -106,9 +168,46 @@
                     <view key="view" contentMode="scaleToFill" id="vUF-pm-oNX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-z8-lOS">
+                                <rect key="frame" x="16" y="72" width="568" height="183"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-A3-p2A">
+                                <rect key="frame" x="16" y="263" width="568" height="64"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIP-g2-icD">
+                                <rect key="frame" x="16" y="335" width="568" height="64"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJN-st-jng">
+                                <rect key="frame" x="16" y="407" width="568" height="64"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWt-ri-8Ov">
+                                <rect key="frame" x="16" y="479" width="568" height="64"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="alternative1Button" destination="wQQ-A3-p2A" id="9dg-i9-cFl"/>
+                        <outlet property="alternative2Button" destination="qIP-g2-icD" id="Wli-Ld-ItO"/>
+                        <outlet property="alternative3Button" destination="SJN-st-jng" id="4Az-36-BHB"/>
+                        <outlet property="alternative4Button" destination="fWt-ri-8Ov" id="5KZ-Td-o6N"/>
+                        <outlet property="questionLabel" destination="2Og-z8-lOS" id="edb-WG-Fbu"/>
                         <segue destination="Fk6-yI-WSf" kind="show" id="Kr0-8N-F9x"/>
                     </connections>
                 </viewController>
@@ -116,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="-276" y="916"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="psc-Rb-xdi">
             <objects>
-                <viewController id="Fk6-yI-WSf" sceneMemberID="viewController">
+                <viewController id="Fk6-yI-WSf" customClass="ResultViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GjX-rp-mm8"/>
                         <viewControllerLayoutGuide type="bottom" id="Vbw-eu-1lb"/>
@@ -127,8 +226,19 @@
                     <view key="view" contentMode="scaleToFill" id="6a9-PL-aYT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-ee-hdb">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="BUG-ee-hdb" id="WQQ-1G-KZb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6G-ba-Lat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
