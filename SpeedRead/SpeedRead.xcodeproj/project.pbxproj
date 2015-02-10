@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2E0CAEE1A8A14650044A85E /* TextsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CAED1A8A14650044A85E /* TextsTableViewController.m */; };
+		A2E0CAF11A8A14860044A85E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CAF01A8A14860044A85E /* SettingsViewController.m */; };
+		A2E0CAF41A8A149F0044A85E /* TextReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CAF31A8A149F0044A85E /* TextReadingViewController.m */; };
+		A2E0CAF71A8A14BE0044A85E /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CAF61A8A14BE0044A85E /* QuestionViewController.m */; };
+		A2E0CAFA1A8A14CE0044A85E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CAF91A8A14CE0044A85E /* ResultViewController.m */; };
 		AC100B911A8560170089F734 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100B901A8560170089F734 /* main.m */; };
 		AC100B941A8560170089F734 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100B931A8560170089F734 /* AppDelegate.m */; };
 		AC100B971A8560170089F734 /* SpeedRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC100B951A8560170089F734 /* SpeedRead.xcdatamodeld */; };
-		AC100B9A1A8560170089F734 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC100B991A8560170089F734 /* ViewController.m */; };
 		AC100B9D1A8560170089F734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC100B9B1A8560170089F734 /* Main.storyboard */; };
 		AC100B9F1A8560170089F734 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC100B9E1A8560170089F734 /* Images.xcassets */; };
 		AC100BA21A8560170089F734 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC100BA01A8560170089F734 /* LaunchScreen.xib */; };
@@ -36,14 +40,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2E0CAEC1A8A14650044A85E /* TextsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextsTableViewController.h; sourceTree = "<group>"; };
+		A2E0CAED1A8A14650044A85E /* TextsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextsTableViewController.m; sourceTree = "<group>"; };
+		A2E0CAEF1A8A14860044A85E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		A2E0CAF01A8A14860044A85E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		A2E0CAF21A8A149F0044A85E /* TextReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextReadingViewController.h; sourceTree = "<group>"; };
+		A2E0CAF31A8A149F0044A85E /* TextReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextReadingViewController.m; sourceTree = "<group>"; };
+		A2E0CAF51A8A14BE0044A85E /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		A2E0CAF61A8A14BE0044A85E /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		A2E0CAF81A8A14CE0044A85E /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		A2E0CAF91A8A14CE0044A85E /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		AC100B8B1A8560160089F734 /* SpeedRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC100B8F1A8560170089F734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC100B901A8560170089F734 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC100B921A8560170089F734 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC100B931A8560170089F734 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC100B961A8560170089F734 /* SpeedRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeedRead.xcdatamodel; sourceTree = "<group>"; };
-		AC100B981A8560170089F734 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AC100B991A8560170089F734 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AC100B9C1A8560170089F734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC100B9E1A8560170089F734 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC100BA11A8560170089F734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -113,8 +125,6 @@
 				AC100BB71A8560520089F734 /* View */,
 				AC100B921A8560170089F734 /* AppDelegate.h */,
 				AC100B931A8560170089F734 /* AppDelegate.m */,
-				AC100B981A8560170089F734 /* ViewController.h */,
-				AC100B991A8560170089F734 /* ViewController.m */,
 				AC100B9E1A8560170089F734 /* Images.xcassets */,
 				AC100B8E1A8560170089F734 /* Supporting Files */,
 			);
@@ -190,6 +200,16 @@
 		AC100BBA1A85606B0089F734 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A2E0CAEC1A8A14650044A85E /* TextsTableViewController.h */,
+				A2E0CAED1A8A14650044A85E /* TextsTableViewController.m */,
+				A2E0CAEF1A8A14860044A85E /* SettingsViewController.h */,
+				A2E0CAF01A8A14860044A85E /* SettingsViewController.m */,
+				A2E0CAF21A8A149F0044A85E /* TextReadingViewController.h */,
+				A2E0CAF31A8A149F0044A85E /* TextReadingViewController.m */,
+				A2E0CAF51A8A14BE0044A85E /* QuestionViewController.h */,
+				A2E0CAF61A8A14BE0044A85E /* QuestionViewController.m */,
+				A2E0CAF81A8A14CE0044A85E /* ResultViewController.h */,
+				A2E0CAF91A8A14CE0044A85E /* ResultViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -298,14 +318,18 @@
 				AC100BC61A8561570089F734 /* SRTest.m in Sources */,
 				AC100BBD1A8561210089F734 /* SRResult.m in Sources */,
 				AC100B941A8560170089F734 /* AppDelegate.m in Sources */,
+				A2E0CAEE1A8A14650044A85E /* TextsTableViewController.m in Sources */,
 				AC14B5C91A856A65008EE28C /* SRDaoText.m in Sources */,
 				AC100B971A8560170089F734 /* SpeedRead.xcdatamodeld in Sources */,
 				AC14B5C61A856A55008EE28C /* SRDaoTest.m in Sources */,
-				AC100B9A1A8560170089F734 /* ViewController.m in Sources */,
 				AC100B911A8560170089F734 /* main.m in Sources */,
 				AC100BC01A8561320089F734 /* SRSession.m in Sources */,
 				AC100BC31A8561480089F734 /* SRSetting.m in Sources */,
+				A2E0CAF71A8A14BE0044A85E /* QuestionViewController.m in Sources */,
 				AC14B5CC1A856F0D008EE28C /* SRProperties.m in Sources */,
+				A2E0CAF41A8A149F0044A85E /* TextReadingViewController.m in Sources */,
+				A2E0CAF11A8A14860044A85E /* SettingsViewController.m in Sources */,
+				A2E0CAFA1A8A14CE0044A85E /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
