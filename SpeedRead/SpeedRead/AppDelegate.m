@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SRText.h"
+#import "SRDaoText.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    SRText *text = [SRText new];
+    [text setTitle:@"aaa"];
+    
+    
+    SRDaoText *dao = [SRDaoText new];
+    [dao create: text];
+    
+    
     return YES;
 }
 

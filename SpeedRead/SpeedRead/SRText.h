@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface SRText : NSObject
+@interface SRText : NSManagedObject
 
 @property NSString *textAsString;
 @property NSMutableArray *textAsArray;
 @property NSString *title;
+@property NSSet *tests;
 
 @end

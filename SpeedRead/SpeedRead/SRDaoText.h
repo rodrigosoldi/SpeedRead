@@ -12,8 +12,9 @@
 @interface SRDaoText : NSObject
 
 -(void)create:(SRText *)text;
--(SRText *)read: (SRText *)text;
+-(SRText *)read: (NSString *)nameText;
 -(void)update: (SRText *)text;
 -(void)erase: (SRText *)text;
+-(NSMutableArray *)list;
 
 @end

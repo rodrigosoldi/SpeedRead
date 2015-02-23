@@ -32,14 +32,17 @@
     [cTest setValue: answerD forKey:@"answerD"];
     
     
-    
-    if (![context save:&error])
+    if (![context save:&error]){
         NSLog(@"Nao salvo");
+        [context rollback];
+    }
     
 }
 
 -(SRTest *)read:(SRTest *)test
 {
+    
+    
     return nil;
 }
 
@@ -50,7 +53,7 @@
 
 -(void)erase:(SRTest *)test
 {
-    
+
 }
 
 @end

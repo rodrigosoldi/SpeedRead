@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C106a" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Tests" representedClassName="SRTest" syncable="YES">
+    <entity name="Tests" representedClassName="" syncable="YES">
         <attribute name="answerA" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answerB" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answerC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answerD" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question" attributeType="String" syncable="YES"/>
         <attribute name="rightAnswer" attributeType="String" syncable="YES"/>
-        <relationship name="manyToOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Texts" inverseName="oneToMany" inverseEntity="Texts" syncable="YES"/>
+        <relationship name="text" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Texts" inverseName="tests" inverseEntity="Texts" syncable="YES"/>
     </entity>
-    <entity name="Texts" representedClassName="SRText" syncable="YES">
+    <entity name="Texts" representedClassName="" syncable="YES">
         <attribute name="textAsString" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
-        <relationship name="oneToMany" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Tests" inverseName="manyToOne" inverseEntity="Tests" syncable="YES"/>
+        <relationship name="tests" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Tests" inverseName="text" inverseEntity="Tests" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Texts" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Tests" positionX="-54" positionY="-9" width="128" height="148"/>
+        <element name="Texts" positionX="-261" positionY="56" width="128" height="88"/>
     </elements>
 </model>
