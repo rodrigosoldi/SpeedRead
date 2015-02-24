@@ -16,4 +16,8 @@
 @property NSString *title;
 @property NSSet *tests;
 
+-(void)save;
+-(SRText *)text: (NSString *)title;
++(NSSet *)list;
+
 @end
