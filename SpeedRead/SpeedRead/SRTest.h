@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@interface SRTest : NSManagedObject
+@interface SRTest : NSObject
 
 @property NSString *question;
 @property NSMutableArray *answer;

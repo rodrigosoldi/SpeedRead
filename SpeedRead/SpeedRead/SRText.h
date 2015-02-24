@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@interface SRText : NSManagedObject
+@interface SRText : NSObject
 
 @property NSString *textAsString;
 @property NSArray *textAsArray;
