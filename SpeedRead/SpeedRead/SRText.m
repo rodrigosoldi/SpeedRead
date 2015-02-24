@@ -10,4 +10,9 @@
 
 @implementation SRText
 
+
+- (NSArray *)textAsArray {
+    return [self.textAsString componentsSeparatedByString:@" "];
+}
+
 @end
