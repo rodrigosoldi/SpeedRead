@@ -12,7 +12,7 @@
 
 -(BOOL)evaluate
 {
-    if ([_rigthAnswer isEqualToString:_givenAnswer]) {
+    if ([self.rigthAnswer isEqualToString: self.givenAnswer]) {
         return YES;
     }
     else return NO;

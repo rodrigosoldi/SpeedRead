@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "SRText.h"
 #import "SRDaoText.h"
+#import "SRProperties.h"
+#import "SRTest.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +22,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+//    NSManagedObjectContext *context = [delegate managedObjectContext];
+//    
+//    SRText *text = [NSEntityDescription insertNewObjectForEntityForName: TEXTS inManagedObjectContext: context];
+//    
+//    [text setTitle:@"Teste"];
+//    [text setTextAsString:@"123asjdij12inijfnn1jndfn1ini"];
+//    
+//    SRTest *test = [NSEntityDescription insertNewObjectForEntityForName: TESTS inManagedObjectContext: context];
+//    test.question = @"porque eh isso?";
+//    
+//    text.tests = [[NSOrderedSet alloc] initWithObjects:test, nil];
+//    
+//    SRDaoText *daoText = [[SRDaoText alloc] init];
+//    [daoText create: text];
+//    
+//    NSMutableSet *results = [daoText list];
     
     return YES;
 }

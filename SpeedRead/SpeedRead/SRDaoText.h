@@ -15,6 +15,6 @@
 -(SRText *)read: (NSString *)nameText;
 -(void)update: (SRText *)text;
 -(void)erase: (SRText *)text;
--(NSMutableArray *)list;
+-(NSMutableSet *)list;
 
 @end

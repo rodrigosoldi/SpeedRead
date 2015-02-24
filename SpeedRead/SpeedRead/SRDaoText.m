@@ -20,10 +20,9 @@
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
     SRText *entityText = [NSEntityDescription insertNewObjectForEntityForName: TEXTS inManagedObjectContext: context];
-    
     entityText.textAsString = text.textAsString;
     entityText.title = text.title;
-    
+    entityText.tests = text.tests;
     
     if (![context save:&error]){
         NSLog(@"Nao Salvo");
@@ -65,7 +64,7 @@
     
 }
 
--(NSMutableArray *)list
+-(NSMutableSet *)list
 {
     NSError *error;
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
@@ -77,16 +76,16 @@
     
     NSArray *objects = [context executeFetchRequest: request error: &error];
     
-    NSMutableArray *results = [NSMutableArray new];
-    for(NSManagedObject *object in objects){
-        SRText *text = [SRText new];
+    NSMutableSet *results = [NSMutableSet new];
+    for(SRText *object in objects){
+        SRText *text = [[SRText alloc] init];
         text.title = [object valueForKey: @"title"];
         text.textAsString = [object valueForKey:@"textAsString"];
         
         NSArray *test = [object valueForKey:@"tests"];
         NSMutableArray *tests = [NSMutableArray new];
         
-        for (NSManagedObject *t in test) {
+        for (SRTest *t in test) {
             SRTest *te = [SRTest new];
             te.question = [t valueForKey:@"question"];
             te.rigthAnswer = [t valueForKey:@"rightAnswer"];

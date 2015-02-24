@@ -14,7 +14,7 @@
 @property NSString *textAsString;
 @property NSMutableArray *textAsArray;
 @property NSString *title;
-@property NSSet *tests;
+@property NSOrderedSet *tests;
 
 -(void)save;
 -(SRText *)text: (NSString *)title;
