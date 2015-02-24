@@ -7,12 +7,37 @@
 //
 
 #import "SRText.h"
+#import "SRDaoText.h"
 
 @implementation SRText
 
 
 - (NSArray *)textAsArray {
-    return [self.textAsString componentsSeparatedByString:@" "];
+    return [_textAsString componentsSeparatedByString:@" "];
+}
+
+-(void)createWithoutTests
+{
+    SRDaoText *daoText = [[SRDaoText alloc] init];
+    [daoText createWithoutTests: self];
+}
+
+-(void)createWithTests
+{
+    SRDaoText *daoText = [[SRDaoText alloc] init];
+    [daoText createWithTests: self];
+}
+
++(SRText *)text:(NSString *)title
+{
+    SRDaoText *daoText = [[SRDaoText alloc] init];
+    return [daoText read: title];
+}
+
++(NSSet *)list
+{
+    SRDaoText *daoText = [[SRDaoText alloc] init];
+    return [daoText list];
 }
 
 @end

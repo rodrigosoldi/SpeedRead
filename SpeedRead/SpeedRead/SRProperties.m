@@ -7,6 +7,7 @@
 //
 
 #import "SRProperties.h"
+#import "AppDelegate.h"
 
 @implementation SRProperties
 
@@ -32,19 +33,8 @@
 
 -(NSManagedObjectContext *)managedObjectContext
 {
-    
-    if (_managedObjectContext != nil) {
-        return _managedObjectContext;
-    }
-    
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
-    return _managedObjectContext;
-    
-    return nil;
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    return [app managedObjectContext];    
 }
 
 -(NSManagedObjectModel *)managedObjectModel

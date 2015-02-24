@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SRText.h"
 
 @interface SRTest : NSObject
 
@@ -14,6 +15,7 @@
 @property NSMutableArray *answer;
 @property NSString *rigthAnswer;
 @property NSString *givenAnswer;
+@property SRText *text;
 
 -(BOOL)evaluate;
 

@@ -14,15 +14,14 @@
 
 @implementation SRDaoText
 
--(void)create:(SRText *)text
+-(void)createWithoutTests:(SRText *)text
 {
     NSError *error;
-    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [delegate managedObjectContext];
-    SRText *entityText = [NSEntityDescription insertNewObjectForEntityForName: TEXTS inManagedObjectContext: context];
-    entityText.textAsString = text.textAsString;
-    entityText.title = text.title;
-    entityText.tests = text.tests;
+    NSManagedObjectContext *context = [[SRProperties sharedInstance] managedObjectContext];
+    NSManagedObject *entityText = [NSEntityDescription insertNewObjectForEntityForName: TEXTS inManagedObjectContext: context];
+    
+    [entityText setValue: text.textAsString forKey:@"textAsString"];
+    [entityText setValue:text.title forKey:@"title"];
     
     if (![context save:&error]){
         NSLog(@"Nao Salvo");
@@ -31,24 +30,88 @@
     
 }
 
+-(void)createWithTests:(SRText *)text
+{
+    NSError *error;
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+    NSManagedObject *entityText = [NSEntityDescription insertNewObjectForEntityForName: TEXTS inManagedObjectContext: context];
+    
+    [entityText setValue: text.textAsString forKey:@"textAsString"];
+    [entityText setValue:text.title forKey:@"title"];
+    
+    
+    NSMutableSet *mutableSet = [[NSMutableSet alloc] init];
+    for (SRTest *test in text.tests) {
+        NSManagedObject *objectTest = [NSEntityDescription insertNewObjectForEntityForName:TESTS inManagedObjectContext:context];
+        [objectTest setValue: test.question forKey:@"question"];
+        [objectTest setValue: test.rigthAnswer forKey:@"rightAnswer"];
+        
+        //Answer's
+        NSString *answerA = [test.answer objectAtIndex:0];
+        NSString *answerB = [test.answer objectAtIndex:1];
+        NSString *answerC = [test.answer objectAtIndex:2];
+        NSString *answerD = [test.answer objectAtIndex:3];
+        
+        [objectTest setValue: answerA forKey:@"answerA"];
+        [objectTest setValue: answerB forKey:@"answerB"];
+        [objectTest setValue: answerC forKey:@"answerC"];
+        [objectTest setValue: answerD forKey:@"answerD"];
+        
+        [objectTest setValue: entityText forKey:@"text"];
+        
+        [mutableSet addObject: objectTest];
+        
+    }
+    
+    [entityText setValue:mutableSet forKeyPath:@"tests"];
+    
+    if (![context save:&error]){
+        NSLog(@"Nao Salvo");
+        [context rollback];
+    }
+}
+
 -(SRText *)read:(NSString *)nameText
 {
     
     NSManagedObjectContext *context = [[SRProperties sharedInstance] managedObjectContext];
-    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Tests" inManagedObjectContext:context];
+    NSEntityDescription *entityText = [NSEntityDescription entityForName:TEXTS inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDesc];
+    [request setEntity:entityText];
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"title = %@", nameText];
     [request setPredicate: predicate];
     
 
     NSError *error;
-    NSManagedObject *object = [[context executeFetchRequest:request error:&error] mutableCopy];
+    NSArray *object = [context executeFetchRequest:request error:&error];
     
     SRText *text = [SRText new];
-    if(object != nil){
-        text.title = [object valueForKey:@"title"];
-        text.textAsString = [object valueForKey: @"textAsString"];
+    for (NSManagedObject *objectText in object) {
+        text.title = [objectText valueForKey:@"title"];
+        text.textAsString = [objectText valueForKey:@"textAsString"];
+        
+        NSArray *tests = [objectText valueForKey:@"tests"];
+        text.tests = [[NSMutableSet alloc] init];
+        
+        for (NSManagedObject *objectTest in tests) {
+            SRTest *test = [SRTest new];
+            test.question = [objectTest valueForKey:@"question"];
+            test.rigthAnswer = [objectTest valueForKey:@"rightAnswer"];
+
+            NSMutableArray *answers = [[NSMutableArray alloc] initWithCapacity:4];
+            @try {
+                [answers addObject: [objectTest valueForKey:@"answerA"]];
+                [answers addObject: [objectTest valueForKey:@"answerB"]];
+                [answers addObject: [objectTest valueForKey:@"answerC"]];
+                [answers addObject: [objectTest valueForKey:@"answerD"]];
+            }
+            @catch (NSException *exception) {}
+            
+            test.answer = answers;
+            
+            [text.tests addObject: test];
+        }
     }
     
     return text;
@@ -76,37 +139,37 @@
     
     NSArray *objects = [context executeFetchRequest: request error: &error];
     
-    NSMutableSet *results = [NSMutableSet new];
-    for(SRText *object in objects){
-        SRText *text = [[SRText alloc] init];
-        text.title = [object valueForKey: @"title"];
-        text.textAsString = [object valueForKey:@"textAsString"];
+    NSMutableSet *resultados = [[NSMutableSet alloc] init];
+    SRText *text = [SRText new];
+    for (NSManagedObject *objectText in objects) {
+        text.title = [objectText valueForKey:@"title"];
+        text.textAsString = [objectText valueForKey:@"textAsString"];
         
-        NSArray *test = [object valueForKey:@"tests"];
-        NSMutableArray *tests = [NSMutableArray new];
+        NSArray *tests = [objectText valueForKey:@"tests"];
+        text.tests = [[NSMutableSet alloc] init];
         
-        for (SRTest *t in test) {
-            SRTest *te = [SRTest new];
-            te.question = [t valueForKey:@"question"];
-            te.rigthAnswer = [t valueForKey:@"rightAnswer"];
+        for (NSManagedObject *objectTest in tests) {
+            SRTest *test = [SRTest new];
+            test.question = [objectTest valueForKey:@"question"];
+            test.rigthAnswer = [objectTest valueForKey:@"rightAnswer"];
             
-            NSString *answer1 = [t valueForKey:@"answerA"];
-            NSString *answer2 = [t valueForKey:@"answerB"];
-            NSString *answer3 = [t valueForKey:@"answerC"];
-            NSString *answer4 = [t valueForKey:@"answerD"];
+            NSMutableArray *answers = [[NSMutableArray alloc] initWithCapacity:4];
+            @try {
+                [answers addObject: [objectTest valueForKey:@"answerA"]];
+                [answers addObject: [objectTest valueForKey:@"answerB"]];
+                [answers addObject: [objectTest valueForKey:@"answerC"]];
+                [answers addObject: [objectTest valueForKey:@"answerD"]];
+            }
+            @catch (NSException *exception) {}
             
-            NSMutableArray *answers = [[NSMutableArray alloc] initWithObjects:answer1, answer2, answer3, answer4, nil];
+            test.answer = answers;
             
-            te.answer = answers;
-            
-            [tests addObject: te];
+            [text.tests addObject: test];
         }
-        
-        
-        [results addObject: text];
-    }
+        [resultados addObject: text];
+    }        
     
-    return results;
+    return resultados;
 
 }
 
