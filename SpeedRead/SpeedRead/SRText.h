@@ -12,7 +12,7 @@
 @interface SRText : NSManagedObject
 
 @property NSString *textAsString;
-@property NSMutableArray *textAsArray;
+@property NSArray *textAsArray;
 @property NSString *title;
 @property NSOrderedSet *tests;
 
