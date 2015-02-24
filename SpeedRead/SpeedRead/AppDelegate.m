@@ -21,33 +21,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.    
     
-//    SRText *text = [SRText new];
+//    SRText *t1 = [SRText new];
 //    
-//    [text setTitle:@"Teste"];
-//    [text setTextAsString:@"123asjdij12inijfnn1jndfn1ini"];
-////    
-//    SRTest *test = [SRTest new];
-//    test.question = @"porque eh isso?";
-//    test.rigthAnswer = @"A";
+//    [t1 setTitle:@"Charles Joseph Messier"];
+//    [t1 setTextAsString:@"Charles Joseph Messier (Badonviller, 26 de junho de 1730 – Paris, 12 de abril de 1817) foi um astrônomo francês, conhecido pela compilação e publicação, com a coautoria de Pierre Méchain, de seu catálogo de objetos de céu profundo, uma lista de 110 objetos astronômicos como nebulosas, aglomerados estelares e galáxias que vieram a ser conhecidos como os \"objetos Messier\".1 Pretendia, com a publicação do catálogo, auxiliar a si mesmo e outros astrônomos e observadores em sua atividade astronômica principal durante sua carreira, a investigação de cometas, listando todos objetos que pôde identificar e que poderiam ser facilmente confundidos com cometas transientes, mas que, na realidade, tinham naturezas completamente diferentes e eram fixos no céu noturno. Contudo, Messier, sem intenção, catalogou alguns dos astros mais interessantes para a atual astronomia amadora.2 Tornou-se um observador do céu ao trabalhar para Joseph-Nicolas Delisle em seu observatório em Paris, aos 21 anos. Foi o primeiro astrônomo a dedicar-se quase exclusivamente à procura de cometas e, enquanto aguardava o retorno do cometa Halley, deparou-se com um falso positivo ao confundir uma nebulosa com o cometa. Para evitar novos enganos, começou a compilar os objetos fixos no céu profundo que poderiam ser facilmente confundidos com um cometa, objeto difuso e de fraco brilho. De 1758 a 1782, com a ajuda de Pierre Méchain após 1774, compilou 107 objetos entre nebulosas, aglomerados estelares e galáxias.nota 1 Três objetos adicionais foram mais tarde adicionados ao catálogo, após a morte de Messier, completando 110 objetos ao todo.Contudo, foi bem-sucedido em sua principal atividade astronômica, a descoberta e acompanhamento de cometas, Descobriu vinte ao todo,3 treze descobertos originalmente por ele e outras 7 codescobertas independentes. Também foi membro de várias academias científicas espalhadas pela Europa, sendo membro estrangeiro da Royal Society e membro efetivo da Académie des sciences.1 Em 1806, recebeu de Napoleão Bonaparte a Ordem Nacional da Legião de Honra4 e dedicou ao imperador francês o Grande Cometa de 1769, considerado \"o último cometa astrologicamente apresentado ao público por um astrônomo ortodoxo\"."];
 //    
-//    NSString *a = @"Porque tem q ser";
-//    NSString *b = @"Porque é";
-//    NSString *c = @"Porque já era";
-//    NSString *d = @"Porque fui";
 //    
-//    test.answer = [[NSMutableArray alloc] initWithObjects:a, b, c, d, nil];
-//    
-//    test.text = text;
-////
-//    text.tests = [[NSMutableSet alloc] initWithObjects:test, nil];
-////
-//    
-//    [text createWithTests];
-//    
-//    [SRText text:@"Teste"];
+//    [t1 createWithoutTests];
     
-//
-//    NSMutableSet *results = [daoText list];
+    
     
     return YES;
 }
