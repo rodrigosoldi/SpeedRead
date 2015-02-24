@@ -13,10 +13,24 @@
 @property NSString *textAsString;
 @property (readonly) NSArray *textAsArray;
 @property NSString *title;
-@property NSOrderedSet *tests;
+@property NSMutableSet *tests;
 
--(void)save;
--(SRText *)text: (NSString *)title;
+#pragma mark - Core Data Methods
+
+/*! 
+ This method creates a new SRText in Database without the SRTest.
+ 
+ */
+-(void)createWithoutTests;
+
+
+/*!
+  This method creates a new SRText in Database with all SRTest
+ */
+-(void)createWithTests;
+
++(SRText *)text: (NSString *)title;
+
 +(NSSet *)list;
 
 @end

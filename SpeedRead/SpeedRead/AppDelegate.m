@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "SRText.h"
-#import "SRDaoText.h"
 #import "SRProperties.h"
 #import "SRTest.h"
 
@@ -20,24 +19,34 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch.    
     
-//    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-//    NSManagedObjectContext *context = [delegate managedObjectContext];
-//    
-//    SRText *text = [NSEntityDescription insertNewObjectForEntityForName: TEXTS inManagedObjectContext: context];
+//    SRText *text = [SRText new];
 //    
 //    [text setTitle:@"Teste"];
 //    [text setTextAsString:@"123asjdij12inijfnn1jndfn1ini"];
-//    
-//    SRTest *test = [NSEntityDescription insertNewObjectForEntityForName: TESTS inManagedObjectContext: context];
+////    
+//    SRTest *test = [SRTest new];
 //    test.question = @"porque eh isso?";
+//    test.rigthAnswer = @"A";
 //    
-//    text.tests = [[NSOrderedSet alloc] initWithObjects:test, nil];
+//    NSString *a = @"Porque tem q ser";
+//    NSString *b = @"Porque é";
+//    NSString *c = @"Porque já era";
+//    NSString *d = @"Porque fui";
 //    
-//    SRDaoText *daoText = [[SRDaoText alloc] init];
-//    [daoText create: text];
+//    test.answer = [[NSMutableArray alloc] initWithObjects:a, b, c, d, nil];
 //    
+//    test.text = text;
+////
+//    text.tests = [[NSMutableSet alloc] initWithObjects:test, nil];
+////
+//    
+//    [text createWithTests];
+//    
+//    [SRText text:@"Teste"];
+    
+//
 //    NSMutableSet *results = [daoText list];
     
     return YES;

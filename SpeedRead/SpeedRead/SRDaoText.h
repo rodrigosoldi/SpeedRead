@@ -11,7 +11,9 @@
 
 @interface SRDaoText : NSObject
 
--(void)create:(SRText *)text;
+-(void)createWithoutTests:(SRText *)text;
+-(void)createWithTests:(SRText *)text;
+
 -(SRText *)read: (NSString *)nameText;
 -(void)update: (SRText *)text;
 -(void)erase: (SRText *)text;

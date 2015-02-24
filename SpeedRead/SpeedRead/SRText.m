@@ -7,6 +7,7 @@
 //
 
 #import "SRText.h"
+#import "SRDaoText.h"
 
 @implementation SRText
 
