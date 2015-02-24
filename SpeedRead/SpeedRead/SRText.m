@@ -12,7 +12,7 @@
 
 
 - (NSArray *)textAsArray {
-    return [self.textAsString componentsSeparatedByString:@" "];
+    return [_textAsString componentsSeparatedByString:@" "];
 }
 
 @end

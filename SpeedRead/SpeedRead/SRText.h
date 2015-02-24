@@ -11,7 +11,7 @@
 @interface SRText : NSObject
 
 @property NSString *textAsString;
-@property NSArray *textAsArray;
+@property (readonly) NSArray *textAsArray;
 @property NSString *title;
 @property NSOrderedSet *tests;
 
