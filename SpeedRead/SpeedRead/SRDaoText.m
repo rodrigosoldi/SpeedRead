@@ -24,24 +24,6 @@
     entityText.textAsString = text.textAsString;
     entityText.title = text.title;
     
-    NSMutableSet *tests = [entityText mutableSetValueForKey:@"tests"];
-    
-    for(SRTest *test in [text tests]){
-        NSManagedObject *entityTest = [NSEntityDescription insertNewObjectForEntityForName:TESTS inManagedObjectContext:context];
-        [entityTest setValue: test.question forKey:@"question"];
-        [entityTest setValue: test.rigthAnswer forKey:@"rightAnswer"];
-        NSString *answer1 = [test.answer objectAtIndex:0];
-        NSString *answer2 = [test.answer objectAtIndex:1];
-        NSString *answer3 = [test.answer objectAtIndex:2];
-        NSString *answer4 = [test.answer objectAtIndex:3];
-        [entityTest setValue: answer1 forKey:@"answerA"];
-        [entityTest setValue: answer2 forKey:@"answerB"];
-        [entityTest setValue: answer3 forKey:@"answerC"];
-        [entityTest setValue: answer4 forKey:@"answerD"];
-        
-        [tests addObject: test];
-    }
-    
     
     if (![context save:&error]){
         NSLog(@"Nao Salvo");
